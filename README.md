@@ -5,13 +5,14 @@ This is intended to take one user's playlist and convert it into another online 
 
 ### Install dependencies
 
-# install dependencies
-yarn
+```bash
+npm install -g yarn
 ```
 
 
 ## Usage
 The following commands are available in your project:
+
 ```bash
 # Start for development
 yarn run dev
