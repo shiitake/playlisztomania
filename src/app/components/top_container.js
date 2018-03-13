@@ -23,7 +23,7 @@ class _TopContainer extends Component {
     render() {
         return (
             <div>
-                <AppBar title="Sample App"/>
+                <AppBar title="Playlisztomania"/>
                 <Toolbar>
                     <ToolbarTitle text="Container: TopContainer"/>
                 </Toolbar>
