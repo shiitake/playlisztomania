@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import { Container } from 'flux/utils';
-import { Link } from 'react-router-dom';
 import AppBar from 'material-ui/AppBar';
-import { Toolbar, ToolbarTitle } from 'material-ui/Toolbar';
-import { List, ListItem } from 'material-ui/List';
+import TextField from 'material-ui/TextField';
+import RaisedButton from 'material-ui/RaisedButton';
 import SampleStore from '../stores/store';
+import SongTable from './song_table';
+
+const style = {
+    margin: 12,
+};
 
 class _TopContainer extends Component {
     static getStores() {
@@ -17,6 +21,8 @@ class _TopContainer extends Component {
         };
     }
 
+
+
     componentDidMount() {
     }
 
@@ -24,14 +30,13 @@ class _TopContainer extends Component {
         return (
             <div>
                 <AppBar title="Playlisztomania"/>
-                <Toolbar>
-                    <ToolbarTitle text="Container: TopContainer"/>
-                </Toolbar>
-                <List>
-                    <ListItem><Link to="/">Top</Link></ListItem>
-                    <ListItem><Link to="/sample1">Sample1</Link></ListItem>
-                    <ListItem><Link to="/sample2">Sample2</Link></ListItem>
-                </List>
+                <div>
+                    <TextField hintText="Playlist Url" />
+                    <RaisedButton label="Generate Playlist" style={style} />
+                </div>
+                <div>
+                    <SongTable />
+                </div>
             </div>
         );
     }
